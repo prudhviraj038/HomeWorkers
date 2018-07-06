@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="registerbackground">#D9D9D9</color>
+    <color name="loginbackground">#1C1C1C</color>
+    <color name="black">#1C1C1C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#B9AB8C</color>
+    <color name="loginselect">#222222</color>
+    <color name="registerdeselect">#6C6C6C</color>
+    <color name="grey">#e9ecef</color>
+    <color name="buttons">#00a3b6</color>
+    <color name="newblack">#1D2A38</color>
+    <color name="newcolor">#1b1b1b</color>
+</resources>
