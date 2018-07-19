@@ -34,9 +34,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_above="@+id/space"
+                android:layout_marginBottom="15dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.example.yellowsoft.homeworkers.TextViewBold
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -59,7 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -69,19 +70,19 @@
                     android:orientation="horizontal">
 
                     <!--<com.example.yellowsoft.homeworkers.ZoomTextView-->
-                        <!--android:id="@+id/add_btn"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_marginRight="10dp"-->
-                        <!--android:background="@drawable/white_rou_rec"-->
-                        <!--android:gravity="center_vertical|center_horizontal"-->
-                        <!--android:text="Request Home Workers"-->
-                        <!--android:textColor="#ffffff"-->
-                        <!--android:textSize="14sp"-->
-                        <!--android:visibility="gone" />-->
+                    <!--android:id="@+id/add_btn"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:background="@drawable/white_rou_rec"-->
+                    <!--android:gravity="center_vertical|center_horizontal"-->
+                    <!--android:text="Request Home Workers"-->
+                    <!--android:textColor="#ffffff"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:visibility="gone" />-->
 
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/add_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"

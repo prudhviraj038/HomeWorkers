@@ -19,7 +19,7 @@
             android:src="@drawable/back_icon"
             android:tint="#ffffff" />
 
-        <TextView
+        <com.example.yellowsoft.homeworkers.TextViewBold
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -42,7 +42,7 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <TextView
+            <com.example.yellowsoft.homeworkers.TextViewRegular
                 android:id="@+id/about"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

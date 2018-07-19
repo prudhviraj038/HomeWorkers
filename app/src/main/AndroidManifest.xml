@@ -38,6 +38,16 @@
         <activity android:name=".ContactusActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".SettingsActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".RequestHomeWorkersActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".HomeWorkerRequestsList" android:screenOrientation="portrait"></activity>
+        <activity android:name=".CorporateRequestActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".EmployeeRequestActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".CorporateNextActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".CorporatethreeActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".StepTwoActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".StepThreeActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".StepFourActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".CorporateListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".EmployeeRequestListActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

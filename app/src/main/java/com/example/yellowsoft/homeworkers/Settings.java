@@ -11,12 +11,16 @@ import java.io.Serializable;
  */
 
 public class Settings implements Serializable {
-    public String logo,title,title_ar,email,phone,avail_amount,about,about_ar,contact,contact_ar,privacy,privacy_ar,terms,terms_ar;
+    public String logo,title,title_ar,email,phone,image1,image2,image3,image4,avail_amount,about,about_ar,contact,contact_ar,privacy,privacy_ar,terms,terms_ar;
     public Settings(JsonObject jsonObject, Context context){
         logo = jsonObject.get("logo").getAsString();
         title = jsonObject.get("title").getAsString();
         title_ar = jsonObject.get("title_ar").getAsString();
         email = jsonObject.get("email").getAsString();
+        image1 = jsonObject.get("image1").getAsString();
+        image2 = jsonObject.get("image2").getAsString();
+        image3 = jsonObject.get("image3").getAsString();
+        image4 = jsonObject.get("image4").getAsString();
         phone = jsonObject.get("phone").getAsString();
         avail_amount = jsonObject.get("avail_amount").getAsString();
         about = jsonObject.get("about").getAsString();

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@drawable/back_icon" />
+
+        <com.example.yellowsoft.homeworkers.TextViewBold
+            android:id="@+id/st_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Corporate Form Request"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Enter Manpower Request"
+                    android:textColor="@color/grey" />
+
+                <LinearLayout
+                    android:id="@+id/category_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/category_option"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="Select Categories"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textColorLink="@color/white" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/topbotarrow" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/workers_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/workers_option"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="No. of Workers"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textColorLink="@color/white" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/topbotarrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/salary"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Salary"
+                            android:inputType="number"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/benefits"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Other Benefits"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textMultiLine"
+                    android:text="Disclaimer:Any candidates from International Group of Aamina that has been rejected for any reasons and found that is working under within six month period of time,International group of Aamina has the right to collect the SERVICE FEE per the applicants as agreed to our local agreement."
+                    android:textColor="@color/white" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rou_rect"
+                    android:gravity="center">
+
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
+                        android:id="@+id/next_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="Upload your Company Papers"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/category_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/category_close_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:src="@drawable/close_icon" />
+
+                    <com.example.yellowsoft.homeworkers.TextViewBold
+                        android:id="@+id/st_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Categories"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/categories_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"></ListView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/workers_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/workers_close_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:src="@drawable/close_icon" />
+
+                    <com.example.yellowsoft.homeworkers.TextViewBold
+                        android:id="@+id/st_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Workers"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/workers_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"></ListView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

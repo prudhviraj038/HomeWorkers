@@ -1,5 +1,6 @@
 package com.example.yellowsoft.homeworkers;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -13,6 +14,8 @@ import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -61,13 +64,14 @@ public class PartTimeWorkersActivity extends Activity {
     String quant;
     int dates = 7;
     String msg,amount,booking_id;
-    TextView st_area,st_day,st_quantity,st_shift,st_block,st_judda,st_street,st_house,st_sr,st_evening,st_morning;
+    TextView st_area,st_day,st_quantity,st_shift,st_block,st_judda,st_street,st_house,st_sr,st_evening,st_morning,st_address;
     ImageView male_checkbox,female_checkbox;
     TextView male_option,female_option;
     LinearLayout male,female;
     ArrayList<Services> servicesfrom_api;
     ServicesAdapter servicesAdapter;
-    String service_id;
+    String service_id,service_charge;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -95,7 +99,7 @@ public class PartTimeWorkersActivity extends Activity {
         st_day.setText(Session.GetWord(this,"Day"));
         st_quantity.setText(Session.GetWord(this,"Quantity"));
         st_shift.setText(Session.GetWord(this,"Choose Shift"));
-        address.setText(Session.GetWord(this,"Enter your address"));
+       // st_address.setText(Session.GetWord(this,"Enter your address"));
         st_block.setText(Session.GetWord(this,"Block"));
         st_street.setText(Session.GetWord(this,"Street"));
         st_judda.setText(Session.GetWord(this,"Judda"));
@@ -118,7 +122,7 @@ public class PartTimeWorkersActivity extends Activity {
         block = (EditText) findViewById(R.id.block);
         street = (EditText) findViewById(R.id.street);
         judda = (EditText) findViewById(R.id.judda);
-        address = (EditText) findViewById(R.id.address);
+        st_address = (TextView) findViewById(R.id.st_address);
         house = (EditText) findViewById(R.id.house);
         message = (EditText) findViewById(R.id.message);
         listView = (ListView) findViewById(R.id.areas_list);
@@ -244,6 +248,8 @@ public class PartTimeWorkersActivity extends Activity {
             @Override
             public void onClick(View view) {
                 service_popup.setVisibility(View.VISIBLE);
+                Animation anim = AnimationUtils.loadAnimation(PartTimeWorkersActivity.this, R.anim.myanim);
+                service_popup.startAnimation(anim);
             }
         });
 
@@ -256,6 +262,8 @@ public class PartTimeWorkersActivity extends Activity {
 
         servicesAdapter = new ServicesAdapter(this,servicesfrom_api,this);
         services_list.setAdapter(servicesAdapter);
+
+        amt_btn.setText("000 KD");
 
 
 
@@ -460,13 +468,16 @@ public class PartTimeWorkersActivity extends Activity {
         return builder.create();
     }
 
+
+
+
     public void get_quantity(){
         final KProgressHUD hud = KProgressHUD.create(this).setStyle(KProgressHUD.Style.SPIN_INDETERMINATE).setLabel("Please wait").setCancellable(true).setMaxProgress(100).show();
         Ion.with(this)
                 .load(Session.SERVER_URL+"part_qty.php")
-                .setBodyParameter("service_id",service_id)
                 .setBodyParameter("day",day_option.getText().toString())
                 .setBodyParameter("shift",checked)
+                .setBodyParameter("service_id",service_id)
                 .setBodyParameter("type",type)
                 .asJsonObject()
                 .setCallback(new FutureCallback<JsonObject>() {
@@ -474,6 +485,7 @@ public class PartTimeWorkersActivity extends Activity {
                     public void onCompleted(Exception e, JsonObject result) {
                         try {
                             hud.dismiss();
+                            Log.e("serviceid",service_id);
                             Log.e("quant",result.toString());
                             quantity = Integer.parseInt(result.get("available_workers").getAsString());
                             Dialog dialog = onCreateDialogSingleChoice();
@@ -483,13 +495,16 @@ public class PartTimeWorkersActivity extends Activity {
 //                                Log.e("quantity", String.valueOf(quantity));
 //                            }
                             amount = result.get("price").getAsString();
-                            amt_btn.setText(amount + " KD ");
+                            amt_btn.setText(amount);
+
+
                         }catch (Exception e1){
                             e1.printStackTrace();
                         }
                     }
                 });
     }
+
 
     public Dialog onCreateDialogSingleChoice() {
 
@@ -502,12 +517,16 @@ public class PartTimeWorkersActivity extends Activity {
         }
         builder.setTitle("Select Quantity").setSingleChoiceItems(array, 0, new DialogInterface.OnClickListener() {
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(DialogInterface dialog, int i) {
                 String selectedItem = array[i].toString();
                 Log.e("select",selectedItem);
                 worker_option.setText(selectedItem);
                 Log.e("quantity", String.valueOf(quantity));
+                service_charge = String.valueOf(Integer.parseInt(worker_option.getText().toString()) *Integer.parseInt(amount));
+                amt_btn.setText(service_charge+ " KD ");
+                Log.e("servicecharge", amt_btn.getText().toString());
 
             }
         })
@@ -529,6 +548,8 @@ public class PartTimeWorkersActivity extends Activity {
     }
 
 
+
+
     public void addPartTimeWorkers(){
         String area_option_string = area_id;
         String day_string = day_option.getText().toString();
@@ -538,9 +559,9 @@ public class PartTimeWorkersActivity extends Activity {
         String street_string = street.getText().toString();
         String judda_string = judda.getText().toString();
         String house_string = house.getText().toString();
-        String service_string = service_option.getText().toString();
+        final String service_string = service_option.getText().toString();
+        String address_string  = block_string +" "+street_string+" "+house_string+" "+judda_string;
         String type_string = type;
-        String address_string = address.getText().toString();
         final String amount_string = amt_btn.getText().toString();
         if (area_option_string==""){
             Toast.makeText(PartTimeWorkersActivity.this,"Please Select Area",Toast.LENGTH_SHORT).show();
@@ -560,6 +581,9 @@ public class PartTimeWorkersActivity extends Activity {
             service_option.requestFocus();
         }else if (type.equals("")){
             Toast.makeText(PartTimeWorkersActivity.this,"Please Pass Type male/female",Toast.LENGTH_SHORT).show();
+        }else if (address_string.equals("")){
+            Toast.makeText(PartTimeWorkersActivity.this,"Please Enter Address",Toast.LENGTH_SHORT).show();
+            block.requestFocus();
         }else{
             final KProgressHUD hud = KProgressHUD.create(this).setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                     .setLabel("Please wait").setCancellable(true).setMaxProgress(100).show();
@@ -586,7 +610,7 @@ public class PartTimeWorkersActivity extends Activity {
                                     Log.e("booking",booking_id);
                                     Toast.makeText(PartTimeWorkersActivity.this,result.get("message").getAsString(),Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(PartTimeWorkersActivity.this, PaymentPage.class);
-                                    intent.putExtra("amount", amount);
+                                    intent.putExtra("amount", service_charge);
                                     PartTimeWorkersActivity.this.startActivityForResult(intent, 1);
                                 }else {
                                     Toast.makeText(PartTimeWorkersActivity.this,result.get("message").getAsString(),Toast.LENGTH_SHORT).show();
@@ -613,6 +637,7 @@ public class PartTimeWorkersActivity extends Activity {
                     @Override
                     public void onCompleted(Exception e, JsonObject result) {
                          hud.dismiss();
+                        PartTimeWorkersActivity.this.onBackPressed();
                     }
                 });
     }

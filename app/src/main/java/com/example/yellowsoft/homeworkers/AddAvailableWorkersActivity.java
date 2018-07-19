@@ -64,6 +64,7 @@ public class AddAvailableWorkersActivity extends Activity {
         nationality_close_btn = (ImageView) findViewById(R.id.nationality_close_btn);
         religion_close_btn = (ImageView) findViewById(R.id.religion_close_btn);
         nationality_list = (ListView) findViewById(R.id.nationality_list);
+        back_btn = (ImageView) findViewById(R.id.back_btn);
         religion_list = (ListView) findViewById(R.id.religion_list);
         nationalityAdapter = new NationalityAdapter(this,nationalitiesfrom_api);
         nationality_list.setAdapter(nationalityAdapter);
@@ -78,6 +79,13 @@ public class AddAvailableWorkersActivity extends Activity {
                 nationality_popup.startAnimation(anim);
 //                Dialog dialog = onNationalityChoice();
 //                dialog.show();
+            }
+        });
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AddAvailableWorkersActivity.this.onBackPressed();
             }
         });
 

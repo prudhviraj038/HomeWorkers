@@ -33,15 +33,15 @@ public class ContactusActivity extends Activity {
         phone = (EditText) findViewById(R.id.phone);
         message = (EditText) findViewById(R.id.message);
         send_btn = (TextView) findViewById(R.id.send_btn);
-        st_name = (TextView) findViewById(R.id.st_name);
-        st_email = (TextView) findViewById(R.id.st_email);
-        st_phone = (TextView) findViewById(R.id.st_phone);
-        st_message  = (TextView) findViewById(R.id.st_message);
+//        st_name = (TextView) findViewById(R.id.st_name);
+//        st_email = (TextView) findViewById(R.id.st_email);
+//        st_phone = (TextView) findViewById(R.id.st_phone);
+//        st_message  = (TextView) findViewById(R.id.st_message);
 
-        st_name.setText(Session.GetWord(this,"Name"));
-        st_email.setText(Session.GetWord(this,"Email"));
-        st_phone.setText(Session.GetWord(this,"Phone"));
-        st_message.setText(Session.GetWord(this,"message"));
+//        st_name.setText(Session.GetWord(this,"Name"));
+//        st_email.setText(Session.GetWord(this,"Email"));
+//        st_phone.setText(Session.GetWord(this,"Phone"));
+//        st_message.setText(Session.GetWord(this,"message"));
         send_btn.setText(Session.GetWord(this,"Send"));
 
         back_btn.setOnClickListener(new View.OnClickListener() {

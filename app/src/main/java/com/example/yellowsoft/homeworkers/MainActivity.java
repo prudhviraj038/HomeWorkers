@@ -16,6 +16,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
     MainActivityAdapter adapter;
     ArrayList<String> titles;
-    ArrayList<Integer> images;
+    ArrayList<String> images;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     LinearLayout drawerView;
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     int MY_PERMISSIONS_REQUEST_CALL_PHONE;
     TextView st_title,st_contact,st_about,st_settings;
     private static long back_pressed;
+    LinearLayout corporate_popup;
+    TextView corporaterequest_btn,employeerequest_btn,cancel_btn;
 
     private void openNavigation(){
 
@@ -70,9 +73,21 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Home Workers");
         titles.add("Part-Time Workers");
         titles.add("Available Workers");
-        images.add(R.drawable.homeworkers);
-        images.add(R.drawable.parttimeworkers);
-        images.add(R.drawable.availableworkers);
+        titles.add("CORPORATE");
+//        images.add(R.drawable.homeworkers);
+//        images.add(R.drawable.parttimeworkers);
+//        images.add(R.drawable.availableworkers);
+//        images.add(R.drawable.availableworkers);
+
+        JsonParser jsonParser = new JsonParser();
+        if(!Session.GetSettings(MainActivity.this).equals("-1")) {
+            JsonObject parse = (JsonObject) jsonParser.parse(Session.GetSettings(MainActivity.this));
+            images.add(parse.get("image1").getAsString());
+            images.add(parse.get("image2").getAsString());
+            images.add(parse.get("image3").getAsString());
+            images.add(parse.get("image4").getAsString());
+
+        }
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));
         drawerView = (LinearLayout) findViewById(R.id.drawerView);
@@ -88,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
         st_contact = (TextView) findViewById(R.id.st_contact);
         st_about = (TextView) findViewById(R.id.st_about);
         st_settings = (TextView) findViewById(R.id.st_settings);
+        corporate_popup = (LinearLayout) findViewById(R.id.corporate_popup);
+        corporaterequest_btn = (TextView) findViewById(R.id.corporaterequest_btn);
+        employeerequest_btn = (TextView) findViewById(R.id.employeerequest_btn);
+        cancel_btn = (TextView) findViewById(R.id.cancel_btn);
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 if (Session.GetUserId(MainActivity.this).equals("-1")){
                     Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
                     startActivity(intent);
+                    finish();
                 }else {
                     Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                     startActivity(intent);
@@ -226,7 +246,33 @@ public class MainActivity extends AppCompatActivity {
                 }else if (titles.get(i).equals("Available Workers")){
                     Intent intent = new Intent(MainActivity.this,AvailableWorkersActivity.class);
                     startActivity(intent);
+                }else if (titles.get(i).equals("CORPORATE")){
+                   corporate_popup.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+
+        cancel_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                corporate_popup.setVisibility(View.GONE);
+
+            }
+        });
+
+        corporaterequest_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                  Intent intent =  new Intent(MainActivity.this,CorporateRequestActivity.class);
+                  startActivity(intent);
+            }
+        });
+
+        employeerequest_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this,EmployeeRequestActivity.class);
+                    startActivity(intent);
             }
         });
 
@@ -260,6 +306,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(refresh);
         finish();
     }
+
 
 
     @Override

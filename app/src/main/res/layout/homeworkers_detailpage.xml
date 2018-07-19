@@ -17,7 +17,7 @@
             android:src="@drawable/back_icon"
             android:tint="#ffffff" />
 
-        <TextView
+        <com.example.yellowsoft.homeworkers.TextViewBold
             android:id="@+id/applicant_id"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -73,8 +73,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
                                     android:adjustViewBounds="true"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/layer2" />
+                                    android:scaleType="centerCrop" />
                             </LinearLayout>
 
 
@@ -99,7 +98,7 @@
                                         android:layout_weight="1"
                                         android:orientation="vertical">
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/st_id"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -107,7 +106,7 @@
                                             android:textColor="@color/registerdeselect"
                                             android:textStyle="normal" />
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/hw_app_id"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
@@ -129,7 +128,7 @@
                                         android:gravity="end"
                                         android:orientation="vertical">
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/st_age"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -137,7 +136,7 @@
                                             android:textColor="@color/registerdeselect"
                                             android:textStyle="normal" />
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/hw_age"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
@@ -161,7 +160,7 @@
                                         android:layout_weight="1"
                                         android:orientation="vertical">
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/st_nationality"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -169,7 +168,7 @@
                                             android:textColor="@color/registerdeselect"
                                             android:textStyle="normal" />
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/hw_nationality"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
@@ -191,7 +190,7 @@
                                         android:gravity="end"
                                         android:orientation="vertical">
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/st_religion"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -199,7 +198,7 @@
                                             android:textColor="@color/registerdeselect"
                                             android:textStyle="normal" />
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/hw_religion"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
@@ -222,7 +221,7 @@
                                         android:layout_weight="1"
                                         android:orientation="vertical">
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/st_salary"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -231,7 +230,7 @@
                                             android:textColor="@color/registerdeselect"
                                             android:textStyle="normal" />
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/hw_sal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
@@ -253,7 +252,7 @@
                                         android:gravity="end"
                                         android:orientation="vertical">
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/st_amount"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
@@ -261,7 +260,7 @@
                                             android:textColor="@color/registerdeselect"
                                             android:textStyle="normal" />
 
-                                        <TextView
+                                        <com.example.yellowsoft.homeworkers.TextViewRegular
                                             android:id="@+id/hw_amount"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
@@ -289,7 +288,7 @@
                     android:layout_margin="10dp"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/call_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
@@ -305,7 +304,7 @@
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/email_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
@@ -327,7 +326,7 @@
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/st_exp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -336,7 +335,7 @@
                         android:textColor="@color/registerdeselect"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/hw_experience"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -366,7 +365,7 @@ It has survived not only five centuries, but also the leap into electronic types
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/st_pd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -395,7 +394,7 @@ It has survived not only five centuries, but also the leap into electronic types
                                 android:paddingLeft="10dp"
                                 android:paddingRight="10dp">
 
-                                <TextView
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
                                     android:id="@+id/st_full_amt"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -403,12 +402,11 @@ It has survived not only five centuries, but also the leap into electronic types
                                     android:textColor="@color/black"
                                     android:textStyle="bold" />
 
-                                <TextView
-                                    android:id="@+id/full_amt"
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginTop="5dp"
-                                    android:text="1000 KD"
+                                    android:text="Remaining Amount"
                                     android:textColor="@color/black"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -422,15 +420,16 @@ It has survived not only five centuries, but also the leap into electronic types
                                 android:paddingLeft="10dp"
                                 android:paddingRight="10dp">
 
-                                <TextView
-                                    android:id="@+id/st_rem_amt"
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
+                                    android:id="@+id/full_amt"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Remaining Amount"
+                                    android:text="1000 KD"
                                     android:textColor="@color/black"
                                     android:textStyle="bold" />
 
-                                <TextView
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
+                                    android:id="@+id/remaining_amt"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginTop="5dp"
@@ -448,7 +447,7 @@ It has survived not only five centuries, but also the leap into electronic types
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/st_partial"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -465,7 +464,7 @@ It has survived not only five centuries, but also the leap into electronic types
                                 android:layout_height="match_parent"
                                 android:layout_weight="1" />
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/part_amt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="30dp"
@@ -484,12 +483,12 @@ It has survived not only five centuries, but also the leap into electronic types
                 </LinearLayout>
 
 
-                <TextView
+                <com.example.yellowsoft.homeworkers.TextViewRegular
                     android:id="@+id/pay_btn"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/color_rectangle"
+                    android:background="@drawable/white_rou_rec"
                     android:gravity="center_vertical|center_horizontal"
                     android:text="Request and Pay"
                     android:textColor="#ffffff"
@@ -505,7 +504,7 @@ It has survived not only five centuries, but also the leap into electronic types
                     android:layout_height="30dp"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/comments_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -520,7 +519,7 @@ It has survived not only five centuries, but also the leap into electronic types
                         android:layout_height="match_parent"
                         android:layout_weight="1" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/addcomments_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -579,13 +578,13 @@ It has survived not only five centuries, but also the leap into electronic types
                         android:tint="#292929"
                         android:visibility="invisible" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewBold
                         android:id="@+id/st_fpassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Add Your Comments"
+                        android:text="Rate Order"
                         android:textColor="#ffffff"
                         android:textSize="15sp" />
 
@@ -610,13 +609,13 @@ It has survived not only five centuries, but also the leap into electronic types
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Comments"
                         android:textColor="@color/registerdeselect" />
 
-                    <EditText
+                    <com.example.yellowsoft.homeworkers.EditTextRegular
                         android:id="@+id/comments_edit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -633,7 +632,7 @@ It has survived not only five centuries, but also the leap into electronic types
                         android:layout_marginTop="5dp"
                         android:background="@color/registerdeselect"></LinearLayout>
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -673,7 +672,7 @@ It has survived not only five centuries, but also the leap into electronic types
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/cp_submit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

@@ -228,14 +228,14 @@
                     android:text="Age"
                     android:textColor="@color/grey" />
 
-                <EditText
+                <TextView
                     android:id="@+id/age"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="7dp"
                     android:background="@android:color/transparent"
-                    android:hint="Please  Age."
+                    android:hint="Enter Age"
                     android:inputType="textPersonName"
                     android:paddingLeft="3dp"
                     android:textColor="@color/white"
@@ -406,7 +406,7 @@
                     android:text="Service Charges"
                     android:textColor="@color/grey" />
 
-                <EditText
+                <TextView
                     android:id="@+id/charges"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -465,7 +465,10 @@
         <LinearLayout
             android:id="@+id/religion_popup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
             android:layout_margin="20dp"
             android:background="@color/black"
             android:orientation="vertical"
@@ -509,7 +512,10 @@
         <LinearLayout
             android:id="@+id/service_popup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
             android:layout_margin="20dp"
             android:background="@color/black"
             android:orientation="vertical"
@@ -553,7 +559,10 @@
         <LinearLayout
             android:id="@+id/nationality_popup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
             android:layout_margin="20dp"
             android:background="@color/black"
             android:orientation="vertical"
@@ -593,6 +602,54 @@
                 android:divider="@null" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/age_popup"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/age_close_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/close" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Select Age"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/age_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@null" />
+
+        </LinearLayout>
+
 
 
 

@@ -57,6 +57,7 @@ public class ServicesAdapter extends BaseAdapter {
         TextView title = (TextView) item_view.findViewById(R.id.title);
         title.setText(services.get(i).title);
         activity.service_id = services.get(i).id;
+        Log.e("service_id",services.get(i).id);
         return item_view;
     }
 }

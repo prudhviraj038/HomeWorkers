@@ -58,7 +58,7 @@
                             android:src="@drawable/lang" />
 
 
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/st_title"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -109,7 +109,7 @@
                             android:layout_marginRight="5dp"
                             android:src="@drawable/contact_us" />
 
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/st_contact"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -137,7 +137,7 @@
                             android:layout_marginRight="5dp"
                             android:src="@drawable/account" />
 
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/st_about"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -165,7 +165,7 @@
                             android:layout_marginRight="6dp"
                             android:src="@drawable/settings" />
 
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/st_settings"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -201,7 +201,77 @@
             </RelativeLayout>
 
 
+            <LinearLayout
+                android:id="@+id/corporate_popup"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/whire_rounded_corners_color"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="15dp"
+                    android:text="Select Type of Request"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d2d2d2"></LinearLayout>
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/corporaterequest_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="Corporate Request"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d2d2d2"></LinearLayout>
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/employeerequest_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="Employee Request"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d2d2d2"></LinearLayout>
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="Cancel"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+
+
         </RelativeLayout>
+
+
+
 
 
     </RelativeLayout>
@@ -342,6 +412,9 @@
 
 
     </LinearLayout>
+
+
+
 
 
 

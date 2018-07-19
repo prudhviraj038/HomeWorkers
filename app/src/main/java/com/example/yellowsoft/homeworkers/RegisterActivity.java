@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ public class RegisterActivity extends Activity {
     EditText email,password,reg_fname,reg_lname,reg_email,reg_password,phone;
     TextView fp_btn,register;
     TextView st_email,st_password,login_submit,register_ll,st_fname,st_lname,st_email_add,st_phone,st_pass;
+    ImageView back_btn;
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -57,6 +59,7 @@ public class RegisterActivity extends Activity {
         st_email_add = (TextView) findViewById(R.id.st_email_add);
         st_phone = (TextView) findViewById(R.id.st_phone);
         st_pass = (TextView) findViewById(R.id.st_pass);
+        back_btn = (ImageView) findViewById(R.id.back_btn);
 
         st_email.setText(Session.GetWord(this,"Email Address"));
         st_password.setText(Session.GetWord(this,"Password"));
@@ -116,6 +119,13 @@ public class RegisterActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RegisterActivity.this.onBackPressed();
+            }
+        });
     }
 
     public void login(){
@@ -170,6 +180,7 @@ public class RegisterActivity extends Activity {
         String lname_string = reg_lname.getText().toString();
         String email_string = reg_email.getText().toString();
         String password_string = reg_password.getText().toString();
+        String phone_string = phone.getText().toString();
         if (fname_string.equals("")){
             Toast.makeText(RegisterActivity.this,"Please Enter First Name",Toast.LENGTH_SHORT).show();
             reg_fname.requestFocus();
@@ -180,8 +191,11 @@ public class RegisterActivity extends Activity {
             Toast.makeText(RegisterActivity.this,"Please Enter Email",Toast.LENGTH_SHORT).show();
             reg_email.requestFocus();
         }else if (password_string.equals("")){
-            Toast.makeText(RegisterActivity.this,"Please Enter Age",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this,"Please Enter Password",Toast.LENGTH_SHORT).show();
             reg_password.requestFocus();
+        }else if(phone_string.equals("")){
+            Toast.makeText(RegisterActivity.this,"Please Enter Phone",Toast.LENGTH_SHORT).show();
+            phone.requestFocus();
         }else {
             final KProgressHUD hud = KProgressHUD.create(RegisterActivity.this)
                     .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
@@ -195,6 +209,7 @@ public class RegisterActivity extends Activity {
                     .setBodyParameter("lname", lname_string)
                     .setBodyParameter("email", email_string)
                     .setBodyParameter("password", password_string)
+                    .setBodyParameter("phone",phone_string)
                     .asJsonObject()
                     .setCallback(new FutureCallback<JsonObject>() {
                         @Override

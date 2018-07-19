@@ -13,6 +13,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/back_btn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:padding="8dp"
@@ -364,6 +365,7 @@
                                     android:background="@android:color/transparent"
                                     android:gravity="start"
                                     android:inputType="number"
+                                    android:maxLength="8"
                                     android:padding="5dp"
                                     android:textAlignment="viewStart"
                                     android:textColor="#FFFFFF"

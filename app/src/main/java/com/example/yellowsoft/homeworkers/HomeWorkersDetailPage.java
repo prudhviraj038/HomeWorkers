@@ -53,6 +53,8 @@ public class HomeWorkersDetailPage extends Activity {
     String amount;
     String msg;
     TextView st_exp,st_pd,st_full_amt,st_rem_amt,st_partial;
+    TextView remaining_amt;
+    String full_amt_kd,part_amt_kd,full_amount,part_amount;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,6 +84,7 @@ public class HomeWorkersDetailPage extends Activity {
         comments_btn = (TextView) findViewById(R.id.comments_btn);
         comments_edit = (EditText) findViewById(R.id.comments_edit);
         part_amt =(TextView) findViewById(R.id.part_amt);
+        remaining_amt = (TextView) findViewById(R.id.remaining_amt);
         TextView st_id = (TextView) findViewById(R.id.st_id);
         TextView st_age = (TextView) findViewById(R.id.st_age);
         TextView st_nationality = (TextView) findViewById(R.id.st_nationality);
@@ -91,7 +94,7 @@ public class HomeWorkersDetailPage extends Activity {
         st_exp = (TextView) findViewById(R.id.st_exp);
         st_pd = (TextView) findViewById(R.id.st_pd);
         st_full_amt = (TextView) findViewById(R.id.st_full_amt);
-        st_rem_amt = (TextView) findViewById(R.id.st_rem_amt);
+        //st_rem_amt = (TextView) findViewById(R.id.st_rem_amt);
         st_partial = (TextView) findViewById(R.id.st_partial);
         book_btn = (TextView) findViewById(R.id.pay_btn);
          ratingBar = (RatingBar) findViewById(R.id.rating);
@@ -102,6 +105,9 @@ public class HomeWorkersDetailPage extends Activity {
 
             }
         });
+
+
+
 
         comments_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,11 +135,20 @@ public class HomeWorkersDetailPage extends Activity {
         hw_sal.setText(homeWorkers.salary + " KD ");
         hw_amt.setText(homeWorkers.amount + " KD ");
         hw_experience.setText(homeWorkers.experience);
-        full_amt.setText(homeWorkers.amount + " KD ");
+       // full_amt.setText(homeWorkers.amount);
         amount = homeWorkers.part_amount;
-        part_amt.setText(amount + " KD ");
+        part_amt.setText(amount);
         Picasso.with(this).load(homeWorkers.image).placeholder(R.drawable.layer2).into(hw_image);
         applicant_id.setText("Applicant ID." + " " + homeWorkers.applicant_id);
+
+         full_amount = homeWorkers.amount;
+         full_amt.setText(full_amount);
+         full_amt_kd = full_amt.getText().toString() + " KD ";
+         part_amt_kd = part_amt.getText().toString() + " KD ";
+
+        part_amt_kd = part_amt.getText().toString() + " KD ";
+        String   charge = String.valueOf(Integer.parseInt(full_amt.getText().toString()) - Integer.parseInt(part_amt.getText().toString()));
+        remaining_amt.setText(charge);
 
         st_id.setText(Session.GetWord(this,"Applicant ID"));
         st_age.setText(Session.GetWord(this,"Age"));
@@ -146,7 +161,7 @@ public class HomeWorkersDetailPage extends Activity {
         st_exp.setText(Session.GetWord(this,"Experience"));
         st_pd.setText(Session.GetWord(this,"Payment Details"));
         st_amount.setText(Session.GetWord(this,"Full Amount"));
-        st_rem_amt.setText(Session.GetWord(this,"Remaining Amount"));
+//        st_rem_amt.setText(Session.GetWord(this,"Remaining Amount"));
         st_partial.setText(Session.GetWord(this,"Partial amount to be paid"));
         comments_btn.setText(Session.GetWord(this,"Comments"));
         addcomments_btn.setText(Session.GetWord(this,"Add Your Comments"));

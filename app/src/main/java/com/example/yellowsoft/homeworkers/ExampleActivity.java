@@ -20,15 +20,8 @@ public class ExampleActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.example);
-        RatingBar ratingBar = (RatingBar) findViewById(R.id.rating);
-        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            public void onRatingChanged(RatingBar ratingBar, float rating,  boolean fromUser) {
-                Log.e("message",String.valueOf(rating));
-                Log.e("mess", String.valueOf(ratingBar.getRating()));
+        setContentView(R.layout.employee_request_page);
 
-            }
-        });
 
 }
 

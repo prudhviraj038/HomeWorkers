@@ -2,6 +2,7 @@ package com.example.yellowsoft.homeworkers;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -23,10 +26,10 @@ public class MainActivityAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
     ArrayList<String> titles;
-    ArrayList<Integer> images;
+    ArrayList<String> images;
      float value = 3.0f;
 
-    public MainActivityAdapter(Context context,ArrayList<String> titles,ArrayList<Integer> images){
+    public MainActivityAdapter(Context context,ArrayList<String> titles,ArrayList<String> images){
         this.context = context;
         this.titles = titles;
         this.images = images;
@@ -52,14 +55,17 @@ public class MainActivityAdapter extends BaseAdapter {
         View item_view = inflater.inflate(R.layout.home_items,null);
         TextView title = (TextView) item_view.findViewById(R.id.title);
         ImageView imageView = (ImageView) item_view.findViewById(R.id.image);
-        ZoomTextView add_btn = (ZoomTextView) item_view.findViewById(R.id.add_btn);
+        TextView add_btn = (TextView) item_view.findViewById(R.id.add_btn);
         Picasso.with(context).load(images.get(i)).into(imageView);
         title.setText(titles.get(i));
+
+
+        Animation aniSlide = AnimationUtils.loadAnimation(context,R.anim.zoomin);
+        add_btn.startAnimation(aniSlide);
 
          if (titles.get(i).equals("Available Workers")){
              add_btn.setVisibility(View.VISIBLE);
              add_btn.setText("Add Available Workers");
-
              add_btn.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View view) {
@@ -100,6 +106,7 @@ public class MainActivityAdapter extends BaseAdapter {
         }else if (titles.get(i).equals("Part-Time Workers")){
             title.setText(Session.GetWord(context,"PART TIME WORKERS"));
         }
+
         return item_view;
     }
 }

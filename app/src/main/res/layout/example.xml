@@ -19,11 +19,12 @@
             android:tint="#ffffff" />
 
         <TextView
+            android:id="@+id/st_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Add Available Workers"
+            android:text="Settings"
             android:textColor="@color/white" />
 
         <ImageView
@@ -31,221 +32,309 @@
             android:layout_height="40dp" />
     </LinearLayout>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="15dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
+                android:background="#272727"
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/st_lang"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name"
-                    android:textColor="@color/grey"></TextView>
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="LANGUAGE"
+                    android:textColor="@color/grey" />
+            </LinearLayout>
 
 
-                <EditText
-                    android:id="@+id/name"
+            <LinearLayout
+                android:id="@+id/lang_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@android:color/transparent"
-                    android:inputType="text"
-                    android:padding="5dp"
-                    android:paddingLeft="3dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Language"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"></LinearLayout>
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Age"
-                    android:textColor="@color/grey"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
-                <EditText
-                    android:id="@+id/age"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@android:color/transparent"
-                    android:inputType="text"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:padding="5dp"
-                    android:paddingLeft="3dp"
+                    android:src="@drawable/next_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#272727"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/st_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="HOME WORKERS"
+                    android:textColor="@color/grey" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/hw_requests_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/st_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Home Worker Requests"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"></LinearLayout>
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nationality"
-                    android:textColor="@color/grey"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
-                <TextView
-                    android:id="@+id/nationality"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:padding="5dp"
-                    android:paddingLeft="3dp"
+                    android:src="@drawable/next_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/available_hw_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/st_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Available Home Workers"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"></LinearLayout>
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Religion"
-                    android:textColor="@color/grey"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
-                <TextView
-                    android:id="@+id/religion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:padding="5dp"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:src="@drawable/next_icon" />
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"></LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/parttime_request_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Salary"
-                    android:textColor="@color/grey"></TextView>
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Part Time Request"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
 
-                <EditText
-                    android:id="@+id/sal"
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@android:color/transparent"
-                    android:inputType="text"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:padding="5dp"
-                    android:paddingLeft="3dp"
+                    android:src="@drawable/next_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="#272727"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/st_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="CORPORATE"
+                    android:textColor="@color/grey" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/hw_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/st_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Home Worker Requests"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"></LinearLayout>
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Amount"
-                    android:textColor="@color/grey"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
-                <EditText
-                    android:id="@+id/amount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@android:color/transparent"
-                    android:inputType="text"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:padding="5dp"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:src="@drawable/next_icon" />
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ahw_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/st_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Available Home Workers"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Experience"
-                    android:textColor="@color/grey"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" />
 
-                <EditText
-                    android:id="@+id/experience"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@android:color/transparent"
-                    android:inputType="text"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:padding="5dp"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:src="@drawable/next_icon" />
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/white"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"></LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal|center"
+                android:orientation="horizontal">
 
 
                 <TextView
+                    android:id="@+id/logout_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp" />
-
-                <LinearLayout
-                    android:id="@+id/submit"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/white_rou_rectangle"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/login_tv_tv"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:text="Submit"
-                        android:textColor="#ffffff"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rou_rect"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="LogOut"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
 
 
         </LinearLayout>
-
-    </ScrollView>
-
-
+    </LinearLayout>
 
 
 </LinearLayout>

@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@drawable/back_icon" />
+
+        <com.example.yellowsoft.homeworkers.TextViewBold
+            android:id="@+id/st_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Employee Request"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Current employment and references"
+                    android:textColor="@color/white" />
+
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/st_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Are you Employeed?"
+                    android:textColor="@color/grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/yes_checkbox"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/checked" />
+
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/yes_option"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Yes"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/no_checkbox"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/unchecked" />
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/no_option"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="No"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/white">
+
+                    <com.example.yellowsoft.homeworkers.EditTextRegular
+                        android:id="@+id/company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="start"
+                        android:hint="CompanyName"
+                        android:inputType="textPersonName"
+                        android:textAlignment="viewStart"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="@color/grey"
+                        android:textColorLink="@color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/st_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:text="May we contact your current employer?"
+                    android:textColor="@color/grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/yes_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/yes_check"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/checked" />
+
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/yes_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Yes"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/no_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/no_check"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/unchecked" />
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/no_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="No"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reference1"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/full_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="Full Name"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/occupation_val1"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="Occupation"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/company_name_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="CompanyName"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="ContactDetails"
+                            android:inputType="number"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reference2"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/full_name_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="Full Name"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/occupation_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="Occupation"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/company_name_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="CompanyName"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/contact_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="ContactDetails"
+                            android:inputType="number"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reference3"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/name_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="Full Name"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/occupation_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="Occupation"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/companyname"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="CompanyName"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.EditTextRegular
+                            android:id="@+id/contact_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="ContactDetails"
+                            android:inputType="number"
+                            android:textAlignment="viewStart"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="@color/grey"
+                            android:textColorLink="@color/white"
+                            android:textCursorDrawable="@null"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"></LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/st_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Have you ever applied before in this company"
+                    android:textColor="@color/grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/yes_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/yes_imageview"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/checked" />
+
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/yes_val"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Yes"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/no_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/no_imageview"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/unchecked" />
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/no_val"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="No"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"></LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/when_option"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="When?"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textColorLink="@color/white" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/topbotarrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"></LinearLayout>
+
+
+                <com.example.yellowsoft.homeworkers.TextViewRegular
+                    android:id="@+id/st_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Do you have relatives working in this company"
+                    android:textColor="@color/grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/yes_working"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/yes_"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/checked" />
+
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/yes_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Yes"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/no_working"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/no_"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/unchecked" />
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/no_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="No"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"></LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColorHint="@color/white">
+
+                    <com.example.yellowsoft.homeworkers.EditTextRegular
+                        android:id="@+id/relationship"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="start"
+                        android:hint="Name and Relationship"
+                        android:inputType="textPersonName"
+                        android:textAlignment="viewStart"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="@color/grey"
+                        android:textColorLink="@color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"></LinearLayout>
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
+                        android:id="@+id/previous_btn"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/white_rou_rectangle"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="Previous"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
+                        android:id="@+id/next_btn"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/white_rou_rectangle"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="Next"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/nationality_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/nationality_close_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:src="@drawable/close_icon" />
+
+                    <TextView
+                        android:id="@+id/st_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Nationality"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/nationality_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"></ListView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/religion_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/corner"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/religion_close_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:src="@drawable/close_icon" />
+
+                    <TextView
+                        android:id="@+id/st_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Religion"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/religion_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"></ListView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

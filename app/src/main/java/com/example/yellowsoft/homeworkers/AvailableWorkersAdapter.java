@@ -57,7 +57,7 @@ public class AvailableWorkersAdapter extends BaseAdapter {
         TextView st_religion = (TextView) item_view.findViewById(R.id.st_religion);
         TextView st_salary = (TextView) item_view.findViewById(R.id.st_salary);
         TextView st_amount = (TextView) item_view.findViewById(R.id.st_amount);
-        Picasso.with(context).load(availableWorkers.get(i).image).placeholder(R.drawable.layer2).into(imageView);
+        Picasso.with(context).load(availableWorkers.get(i).image).into(imageView);
         aw_id.setText(availableWorkers.get(i).name);
         aw_age.setText(availableWorkers.get(i).age);
         aw_nationality.setText(availableWorkers.get(i).nationality_title);
