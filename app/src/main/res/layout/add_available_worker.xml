@@ -63,6 +63,7 @@
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@android:color/transparent"
                     android:gravity="center_vertical"
                     android:hint="Name"
@@ -96,11 +97,12 @@
                     android:id="@+id/age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@android:color/transparent"
                     android:gravity="center_vertical"
+                    android:hint="Age"
                     android:inputType="number"
                     android:padding="5dp"
-                    android:hint="Age"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF"
                     android:textColorLink="@color/white"
@@ -182,6 +184,7 @@
                     android:id="@+id/sal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@android:color/transparent"
                     android:gravity="center_vertical"
                     android:hint="Salary"
@@ -214,6 +217,7 @@
                     android:id="@+id/amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@android:color/transparent"
                     android:gravity="center_vertical"
                     android:hint="Amount"
@@ -246,6 +250,7 @@
                     android:id="@+id/experience"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@android:color/transparent"
                     android:gravity="center_vertical"
                     android:hint="Experience"
@@ -270,7 +275,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                android:layout_height="30dp" />
 
             <LinearLayout
                 android:id="@+id/submit"
