@@ -53,26 +53,31 @@
             android:layout_margin="15dp"
             android:orientation="vertical">
 
-            <com.example.yellowsoft.homeworkers.TextViewRegular
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name"
-                android:textColor="@color/grey"></com.example.yellowsoft.homeworkers.TextViewRegular>
-
-            <com.example.yellowsoft.homeworkers.EditTextRegular
-                android:id="@+id/name"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:gravity="start"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textCursorDrawable="@null"
-                android:textSize="16sp" />
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white">
+
+                <com.example.yellowsoft.homeworkers.EditTextRegular
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -81,33 +86,36 @@
                 android:orientation="vertical"
                 android:paddingBottom="3dp"></LinearLayout>
 
-            <com.example.yellowsoft.homeworkers.TextViewRegular
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Age"
-                android:textColor="@color/grey"></com.example.yellowsoft.homeworkers.TextViewRegular>
-
-            <com.example.yellowsoft.homeworkers.EditTextRegular
-                android:id="@+id/age"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:gravity="start"
-                android:inputType="number"
-                android:padding="5dp"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textColorLink="@color/white"
-                android:textCursorDrawable="@null"
-                android:textSize="16sp" />
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white">
+
+                <com.example.yellowsoft.homeworkers.EditTextRegular
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:hint="Age"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="@color/white"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/white"
                 android:orientation="vertical"></LinearLayout>
+
+
 
             <com.example.yellowsoft.homeworkers.TextViewRegular
                 android:layout_width="wrap_content"
@@ -164,27 +172,30 @@
                 android:background="@color/white"
                 android:orientation="vertical"></LinearLayout>
 
-            <com.example.yellowsoft.homeworkers.TextViewRegular
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Salary"
-                android:textColor="@color/grey"></com.example.yellowsoft.homeworkers.TextViewRegular>
-
-            <com.example.yellowsoft.homeworkers.EditTextRegular
-                android:id="@+id/sal"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:gravity="start"
-                android:inputType="number"
-                android:padding="5dp"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textCursorDrawable="@null"
-                android:textSize="16sp" />
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white">
+
+                <com.example.yellowsoft.homeworkers.EditTextRegular
+                    android:id="@+id/sal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Salary"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -193,27 +204,30 @@
                 android:orientation="vertical"
                 android:paddingBottom="3dp"></LinearLayout>
 
-            <com.example.yellowsoft.homeworkers.TextViewRegular
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Amount"
-                android:textColor="@color/grey"></com.example.yellowsoft.homeworkers.TextViewRegular>
-
-            <com.example.yellowsoft.homeworkers.EditTextRegular
-                android:id="@+id/amount"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:gravity="start"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textCursorDrawable="@null"
-                android:textSize="16sp" />
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white">
+
+                <com.example.yellowsoft.homeworkers.EditTextRegular
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Amount"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -222,27 +236,30 @@
                 android:orientation="vertical"
                 android:paddingBottom="3dp"></LinearLayout>
 
-            <com.example.yellowsoft.homeworkers.TextViewRegular
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Experience"
-                android:textColor="@color/grey"></com.example.yellowsoft.homeworkers.TextViewRegular>
-
-            <com.example.yellowsoft.homeworkers.EditTextRegular
-                android:id="@+id/experience"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:gravity="start"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textAlignment="viewStart"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textCursorDrawable="@null"
-                android:textSize="16sp" />
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white">
+
+                <com.example.yellowsoft.homeworkers.EditTextRegular
+                    android:id="@+id/experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Experience"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"

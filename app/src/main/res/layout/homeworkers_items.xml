@@ -51,7 +51,7 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/st_id"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                                 android:textColor="@color/registerdeselect"
                                 android:textStyle="normal" />
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/hw_id"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -83,7 +83,7 @@
                             android:paddingLeft="2dp"
                             android:paddingRight="5dp">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/st_age"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
                                 android:textColor="@color/registerdeselect"
                                 android:textStyle="normal" />
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/hw_age"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -117,7 +117,7 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/st_nationality"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
                                 android:textColor="@color/registerdeselect"
                                 android:textStyle="normal" />
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/hw_nationality"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -147,7 +147,7 @@
                             android:gravity="end"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/st_religion"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
                                 android:textColor="@color/registerdeselect"
                                 android:textStyle="normal" />
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/hw_religion"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -178,7 +178,7 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/st_salary"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -187,7 +187,7 @@
                                 android:textColor="@color/registerdeselect"
                                 android:textStyle="normal" />
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/sal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
@@ -209,7 +209,7 @@
                             android:gravity="end"
                             android:orientation="vertical">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/st_amount"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -217,7 +217,7 @@
                                 android:textColor="@color/registerdeselect"
                                 android:textStyle="normal" />
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/amt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
