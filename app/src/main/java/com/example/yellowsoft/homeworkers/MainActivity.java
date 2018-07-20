@@ -78,15 +78,18 @@ public class MainActivity extends AppCompatActivity {
 //        images.add(R.drawable.parttimeworkers);
 //        images.add(R.drawable.availableworkers);
 //        images.add(R.drawable.availableworkers);
-
-        JsonParser jsonParser = new JsonParser();
-        if(!Session.GetSettings(MainActivity.this).equals("-1")) {
-            JsonObject parse = (JsonObject) jsonParser.parse(Session.GetSettings(MainActivity.this));
-            images.add(parse.get("image1").getAsString());
-            images.add(parse.get("image2").getAsString());
-            images.add(parse.get("image3").getAsString());
-            images.add(parse.get("image4").getAsString());
-
+        try {
+            JsonParser jsonParser = new JsonParser();
+            if (!Session.GetSettings(MainActivity.this).equals("-1")) {
+                JsonObject parse = (JsonObject) jsonParser.parse(Session.GetSettings(MainActivity.this));
+                images.add(parse.get("image1").getAsString());
+                Log.e("image",parse.get("image1").getAsString());
+                images.add(parse.get("image2").getAsString());
+                images.add(parse.get("image3").getAsString());
+                images.add(parse.get("image4").getAsString());
+            }
+        }catch (Exception e1){
+            e1.printStackTrace();
         }
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.setScrimColor(getResources().getColor(android.R.color.transparent));

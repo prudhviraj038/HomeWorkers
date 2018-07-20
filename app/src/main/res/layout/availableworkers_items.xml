@@ -198,7 +198,6 @@
                                 android:id="@+id/aw_sal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
                                 android:text="220 KD"
                                 android:textColor="@color/black"
                                 android:textStyle="bold" />
@@ -227,7 +226,6 @@
                                 android:id="@+id/aw_amt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
                                 android:text="2200 KD"
                                 android:textColor="@color/black"
                                 android:textStyle="bold" />

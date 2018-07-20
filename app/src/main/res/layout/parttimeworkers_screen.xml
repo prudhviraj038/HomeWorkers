@@ -633,8 +633,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:background="@drawable/rou_rect">
+                    android:background="@drawable/white_fully_rounded_rect"
+                    android:gravity="center">
 
                     <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/book_btn"
@@ -643,7 +643,7 @@
 
                         android:gravity="center_vertical|center_horizontal"
                         android:text="Book and Pay"
-                        android:textColor="#ffffff"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
                 </LinearLayout>

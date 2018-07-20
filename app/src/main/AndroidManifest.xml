@@ -48,6 +48,8 @@
         <activity android:name=".StepFourActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".CorporateListActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".EmployeeRequestListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".AvailableWorkersListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".PartTimeWorkersListActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

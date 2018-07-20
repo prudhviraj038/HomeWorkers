@@ -2,10 +2,16 @@ package com.example.yellowsoft.homeworkers;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,6 +25,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.io.File;
+
 /**
  * Created by info on 16-07-2018.
  */
@@ -30,6 +38,7 @@ public class CorporatethreeActivity extends Activity {
     String corporate_option,worker_option,salary,benefits;
     Integer REQUEST_CAMERA = 1, SELECT_FILE = 0;
     int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE;
+    int ASK_MULTIPLE_PERMISSION_REQUEST_CODE;
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -56,6 +65,13 @@ public class CorporatethreeActivity extends Activity {
         benefits = getIntent().getStringExtra("benefits");
 
         trade_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pick_image();
+            }
+        });
+
+        trade_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pick_image();
@@ -140,44 +156,73 @@ public class CorporatethreeActivity extends Activity {
     }
 
     public void pick_image() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                    != PackageManager.PERMISSION_GRANTED) {
-                if (shouldShowRequestPermissionRationale(
-                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                }
-                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                        MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ActivityCompat.checkSelfPermission(CorporatethreeActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        ASK_MULTIPLE_PERMISSION_REQUEST_CODE);
                 return;
             }
         }
-
-        final String[] cases = {"Camera", "Gallery", "Choose from Library"};
-        final PanterDialog panterDialog = new PanterDialog(CorporatethreeActivity.this);
-        panterDialog.setHeaderBackground(R.color.white);
-        panterDialog.setTitle("Select Image");
-        panterDialog.setDialogType(DialogType.SINGLECHOICE);
-        panterDialog.setPositive("OK");
-        panterDialog.setNegative("Cancel", new View.OnClickListener() {
+        final CharSequence[] items = {"camera","gallery"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("select_image");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                panterDialog.dismiss();
-            }
-        });
-        panterDialog.items(cases, new OnSingleCallbackConfirmListener() {
-            @Override
-            public void onSingleCallbackConfirmed(PanterDialog dialog, int pos, String text) {
-                if (cases[pos].equals("Camera")) {
+            public void onClick(DialogInterface dialog, int item) {
+                if(items[item].equals("camera")){
                     Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(intent, REQUEST_CAMERA);
-                } else if (cases[pos].equals("Gallery")) {
+                    startActivityForResult(intent,0);
+
+                }else if(items[item].equals("gallery")){
                     Intent pickPhoto = new Intent(Intent.ACTION_PICK,
                             MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(pickPhoto, SELECT_FILE);
+                    startActivityForResult(pickPhoto,1);
                 }
             }
         });
-        panterDialog.isCancelable(false);
-        panterDialog.show();
+        AlertDialog alert = builder.create();
+        alert.show();
     }
+
+    String selected_image_path = "";
+    protected void onActivityResult(int requestCode,int resultCode,Intent imageReturnedIntent){
+        super.onActivityResult(requestCode,resultCode,imageReturnedIntent);
+        switch (requestCode){
+            case 1:
+                if (resultCode == RESULT_OK){
+                    Uri selectedImage = imageReturnedIntent.getData();
+                    trade_image.setImageURI(selectedImage);
+                    selected_image_path = getRealPathFromURI(selectedImage);
+                    Log.e("image_path",selected_image_path);
+
+                }
+                break;
+            case 2:
+                if(resultCode == RESULT_OK){
+                    Uri selectedImage = imageReturnedIntent.getData();
+                    trade_image.setImageURI(selectedImage);
+                    File new_file = new File(selectedImage.getPath());
+                    selected_image_path = getRealPathFromURI(selectedImage);
+                    Log.e("image_path",selected_image_path);
+
+                }
+                break;
+        }
+    }
+
+    private String getRealPathFromURI(Uri contentURI){
+        String result;
+        Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
+        if (cursor == null) {
+            result = contentURI.getPath();
+        } else {
+            cursor.moveToFirst();
+            int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+            result = cursor.getString(idx);
+            cursor.close();
+        }
+        return result;
+    }
+
+
 }

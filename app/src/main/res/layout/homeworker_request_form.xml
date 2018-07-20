@@ -19,7 +19,7 @@
             android:src="@drawable/back_icon"
             android:tint="#ffffff" />
 
-        <TextView
+        <com.example.yellowsoft.homeworkers.TextViewBold
             android:id="@+id/st_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -52,19 +52,18 @@
                     android:layout_height="30dp" />
 
 
-                <TextView
+                <com.example.yellowsoft.homeworkers.TextViewRegular
                     android:id="@+id/st_gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:paddingRight="10dp"
-                    android:text="Select Gender"
-                    android:textColor="@color/grey" />
+                    android:text="Gender"
+                    android:textColor="@android:color/darker_gray" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
@@ -72,7 +71,6 @@
                         android:id="@+id/male"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
@@ -84,8 +82,7 @@
                             android:src="@drawable/checked" />
 
 
-
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/male_option"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -98,7 +95,6 @@
                         android:id="@+id/female"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
@@ -109,7 +105,7 @@
                             android:layout_margin="6dp"
                             android:src="@drawable/unchecked" />
 
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/female_option"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -125,37 +121,31 @@
                     android:layout_height="1dp"
                     android:background="@color/registerdeselect"></LinearLayout>
 
-                <TextView
-                    android:id="@+id/st_religion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingRight="10dp"
-                    android:text="Religion"
-                    android:textColor="@color/grey" />
-
                 <LinearLayout
                     android:id="@+id/select_religion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/religion_option"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:hint="Select  Religion"
-                        android:paddingRight="10dp"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white"
-                        android:textColorLink="@color/white" />
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/white">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/religion_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="Religion"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColorLink="@color/white" />
+
+                    </android.support.design.widget.TextInputLayout>
 
 
                     <ImageView
@@ -171,39 +161,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/registerdeselect"></LinearLayout>
-
-
-                <TextView
-                    android:id="@+id/st_nationality"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingRight="10dp"
-                    android:text="Nationality"
-                    android:textColor="@color/grey" />
 
                 <LinearLayout
                     android:id="@+id/select_nationality"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/nationality_option"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:hint="Select Nationality"
-                        android:paddingRight="10dp"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white"
-                        android:textColorLink="@color/white" />
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/white">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/nationality_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="Nationality"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColorLink="@color/white" />
+
+                    </android.support.design.widget.TextInputLayout>
+
 
                     <ImageView
                         android:layout_width="25dp"
@@ -214,34 +198,49 @@
                 </LinearLayout>
 
 
+
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/registerdeselect"></LinearLayout>
 
-                <TextView
-                    android:id="@+id/st_age"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingRight="10dp"
-                    android:text="Age"
-                    android:textColor="@color/grey" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/age"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="7dp"
-                    android:background="@android:color/transparent"
-                    android:hint="Enter Age"
-                    android:inputType="textPersonName"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textColorLink="@color/white"
-                    android:textSize="14sp" />
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/white">
+
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/age"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="Age"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColorLink="@color/white" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/topbotarrow" />
+                </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -249,7 +248,7 @@
                     android:background="@color/registerdeselect"></LinearLayout>
 
 
-                <TextView
+                <com.example.yellowsoft.homeworkers.TextViewRegular
                     android:id="@+id/st_gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -261,15 +260,12 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/yes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
@@ -281,7 +277,7 @@
                             android:src="@drawable/checked" />
 
 
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/yes_option"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -294,7 +290,6 @@
                         android:id="@+id/no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_weight="1"
                         android:orientation="horizontal">
 
@@ -305,7 +300,7 @@
                             android:layout_margin="6dp"
                             android:src="@drawable/unchecked" />
 
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/no_option"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
@@ -321,37 +316,31 @@
                     android:layout_height="1dp"
                     android:background="@color/registerdeselect"></LinearLayout>
 
-                <TextView
-                    android:id="@+id/st_service"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingRight="10dp"
-                    android:text="Service"
-                    android:textColor="@color/grey" />
-
                 <LinearLayout
                     android:id="@+id/select_service"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/service_option"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:hint="Select Service"
-                        android:paddingRight="10dp"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white"
-                        android:textColorLink="@color/white" />
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/white">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
+                            android:id="@+id/service_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="Service"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textColorLink="@color/white" />
+
+                    </android.support.design.widget.TextInputLayout>
 
 
                     <ImageView
@@ -363,63 +352,62 @@
                 </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/registerdeselect"></LinearLayout>
 
-                <TextView
-                    android:id="@+id/st_phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingRight="10dp"
-                    android:text="Phone"
-                    android:textColor="@color/grey" />
 
-                <EditText
-                    android:id="@+id/phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="7dp"
-                    android:background="@android:color/transparent"
-                    android:hint="Enter Phone No."
-                    android:inputType="phone"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textColorLink="@color/white"
-                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/registerdeselect"></LinearLayout>
 
-                <TextView
-                    android:id="@+id/st_servicecharge"
-                    android:layout_width="wrap_content"
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingRight="10dp"
-                    android:text="Service Charges"
-                    android:textColor="@color/grey" />
+                    android:textColorHint="@color/white">
 
-                <TextView
-                    android:id="@+id/charges"
+                    <com.example.yellowsoft.homeworkers.EditTextRegular
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="PhoneNumber"
+                        android:inputType="number"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textColorLink="@color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/registerdeselect"></LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="7dp"
-                    android:background="@android:color/transparent"
-                    android:hint="Service Charge"
-                    android:inputType="text"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textColorLink="@color/white"
-                    android:textSize="14sp" />
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/white">
+
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
+                        android:id="@+id/charges"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:hint="Service Charges"
+                        android:textColor="@color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textColorLink="@color/white" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -435,18 +423,16 @@
                     android:orientation="horizontal">
 
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewRegular
                         android:id="@+id/submit_btn"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginRight="25dp"
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/rou_rect"
+                        android:background="@drawable/white_fully_rounded_rect"
                         android:gravity="center_vertical|center_horizontal"
-                        android:text="Book and Pay"
-                        android:textColor="#ffffff"
+                        android:text="Submit Request"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -486,7 +472,7 @@
                     android:padding="10dp"
                     android:src="@drawable/close" />
 
-                <TextView
+                <com.example.yellowsoft.homeworkers.TextViewBold
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -533,7 +519,7 @@
                     android:padding="10dp"
                     android:src="@drawable/close" />
 
-                <TextView
+                <com.example.yellowsoft.homeworkers.TextViewBold
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -580,7 +566,7 @@
                     android:padding="10dp"
                     android:src="@drawable/close" />
 
-                <TextView
+                <com.example.yellowsoft.homeworkers.TextViewBold
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -627,7 +613,7 @@
                     android:padding="10dp"
                     android:src="@drawable/close" />
 
-                <TextView
+                <com.example.yellowsoft.homeworkers.TextViewBold
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

@@ -17,7 +17,7 @@
             android:src="@drawable/back_icon"
             android:tint="#ffffff" />
 
-        <TextView
+        <com.example.yellowsoft.homeworkers.TextViewBold
             android:id="@+id/st_hw"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -84,7 +84,7 @@
                         android:padding="10dp"
                         android:src="@drawable/close_icon" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewBold
                         android:id="@+id/st_filter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -113,10 +113,70 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/male_checkbox"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_margin="6dp"
+                                    android:src="@drawable/checked" />
+
+
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
+                                    android:id="@+id/male_option"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="Male"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/female_checkbox"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_margin="6dp"
+                                    android:src="@drawable/unchecked" />
+
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
+                                    android:id="@+id/female_option"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:text="Female"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:paddingRight="5dp">
+
 
                             <LinearLayout
                                 android:id="@+id/nationality_btn"
@@ -126,7 +186,7 @@
                                 android:background="@drawable/whire_rounded_corners_color"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
                                     android:id="@+id/nationality_option"
                                     android:layout_width="wrap_content"
                                     android:layout_height="30dp"
@@ -144,7 +204,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
+                            android:layout_margin="5dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:paddingRight="5dp">
@@ -157,7 +217,7 @@
                                 android:background="@drawable/whire_rounded_corners_color"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
                                     android:id="@+id/religion_option"
                                     android:layout_width="wrap_content"
                                     android:layout_height="30dp"
@@ -176,7 +236,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            android:layout_margin="5dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:paddingRight="5dp">
@@ -189,7 +249,7 @@
                                 android:background="@drawable/whire_rounded_corners_color"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
                                     android:id="@+id/age_option"
                                     android:layout_width="wrap_content"
                                     android:layout_height="30dp"
@@ -211,7 +271,8 @@
                             android:layout_marginTop="10dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
-                            android:paddingRight="5dp">
+                            android:paddingRight="5dp"
+                            android:visibility="gone">
 
                             <LinearLayout
                                 android:id="@+id/amount_btn"
@@ -221,7 +282,7 @@
                                 android:background="@drawable/whire_rounded_corners_color"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <com.example.yellowsoft.homeworkers.TextViewRegular
                                     android:id="@+id/amount_option"
                                     android:layout_width="wrap_content"
                                     android:layout_height="30dp"
@@ -244,9 +305,10 @@
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:paddingLeft="5dp"
-                            android:paddingRight="5dp">
+                            android:paddingRight="5dp"
+                            android:visibility="gone">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewRegular
                                 android:id="@+id/st_min_sal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -265,7 +327,7 @@
                                 android:background="@drawable/whire_rounded_corners_color"
                                 android:orientation="horizontal">
 
-                                <EditText
+                                <com.example.yellowsoft.homeworkers.EditTextRegular
                                     android:id="@+id/min"
                                     android:layout_width="wrap_content"
                                     android:layout_height="30dp"
@@ -289,9 +351,10 @@
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
                             android:paddingLeft="5dp"
-                            android:paddingRight="5dp">
+                            android:paddingRight="5dp"
+                            android:visibility="gone">
 
-                            <TextView
+                            <com.example.yellowsoft.homeworkers.TextViewBold
                                 android:id="@+id/st_max_sal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -309,7 +372,7 @@
                                 android:background="@drawable/whire_rounded_corners_color"
                                 android:orientation="horizontal">
 
-                                <EditText
+                                <com.example.yellowsoft.homeworkers.EditTextRegular
                                     android:id="@+id/max"
                                     android:layout_width="wrap_content"
                                     android:layout_height="30dp"
@@ -327,18 +390,16 @@
                         </LinearLayout>
 
 
-                        <TextView
+                        <com.example.yellowsoft.homeworkers.TextViewRegular
                             android:id="@+id/submit_btn"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginTop="15dp"
-                            android:background="@drawable/rou_rect"
+                            android:layout_height="30dp"
+                            android:layout_margin="13dp"
+                            android:background="@drawable/white_fully_rounded_rect"
                             android:gravity="center_vertical|center_horizontal"
                             android:text="SUBMIT"
-                            android:textColor="#ffffff"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
@@ -351,7 +412,7 @@
         <LinearLayout
             android:id="@+id/nationality_popup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="center_vertical"
             android:orientation="vertical"
@@ -383,7 +444,7 @@
                         android:padding="8dp"
                         android:src="@drawable/close_icon" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewBold
                         android:id="@+id/st_filter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -449,7 +510,7 @@
                         android:padding="8dp"
                         android:src="@drawable/close_icon" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewBold
                         android:id="@+id/st_filter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -515,7 +576,7 @@
                         android:padding="8dp"
                         android:src="@drawable/close_icon" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewBold
                         android:id="@+id/st_age"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -581,7 +642,7 @@
                         android:padding="8dp"
                         android:src="@drawable/close_icon" />
 
-                    <TextView
+                    <com.example.yellowsoft.homeworkers.TextViewBold
                         android:id="@+id/st_amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

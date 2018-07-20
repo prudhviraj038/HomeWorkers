@@ -56,14 +56,16 @@ public class MainActivityAdapter extends BaseAdapter {
         TextView title = (TextView) item_view.findViewById(R.id.title);
         ImageView imageView = (ImageView) item_view.findViewById(R.id.image);
         TextView add_btn = (TextView) item_view.findViewById(R.id.add_btn);
-        Picasso.with(context).load(images.get(i)).into(imageView);
+        try {
+            Picasso.with(context).load(images.get(i)).into(imageView);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         title.setText(titles.get(i));
 
 
-        Animation aniSlide = AnimationUtils.loadAnimation(context,R.anim.zoomin);
-        add_btn.startAnimation(aniSlide);
-
-         if (titles.get(i).equals("Available Workers")){
+               if (titles.get(i).equals("Available Workers")){
              add_btn.setVisibility(View.VISIBLE);
              add_btn.setText("Add Available Workers");
              add_btn.setOnClickListener(new View.OnClickListener() {

@@ -297,10 +297,10 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/white_rou_rectangle"
+                        android:background="@drawable/white_fully_rounded_rect"
                         android:gravity="center_vertical|center_horizontal"
                         android:text="CALL"
-                        android:textColor="#ffffff"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
@@ -311,10 +311,10 @@
                         android:layout_marginBottom="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/white_rou_rectangle"
+                        android:background="@drawable/white_fully_rounded_rect"
                         android:gravity="center_vertical|center_horizontal"
                         android:text="EMAIL"
-                        android:textColor="#ffffff"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -488,10 +488,10 @@ It has survived not only five centuries, but also the leap into electronic types
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/white_rou_rec"
+                    android:background="@drawable/white_fully_rounded_rect"
                     android:gravity="center_vertical|center_horizontal"
                     android:text="Request and Pay"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
